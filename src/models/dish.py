@@ -40,4 +40,12 @@ class Dish:
     def get_ingredients(self):
         return set(self.recipe.keys())
 
-# commit inicial
+
+if __name__ == "__main__":
+    ovo = Ingredient("ovo")
+    carne = Ingredient("carne")
+    prato_1 = Dish("omelete", 10.0)
+    prato_1.add_ingredient_dependency(ovo, 2)
+    prato_1.add_ingredient_dependency(carne, 1)
+    print(prato_1.get_restrictions())
+    print(prato_1.recipe)

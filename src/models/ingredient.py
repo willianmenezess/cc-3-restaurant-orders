@@ -63,6 +63,6 @@ class Ingredient:
         return f"Ingredient('{self.name}')"
 
 
-if __name__ == "__main__":
-    carne = Ingredient("carne")
-    print(carne.restrictions)
+# if __name__ == "__main__":
+#     carne = Ingredient("carne")
+#     print(carne.restrictions)
