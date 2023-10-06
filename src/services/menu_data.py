@@ -11,7 +11,7 @@ class MenuData:
         with open(source_path) as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                print('Linha CSV: ', row)
+                # print('Linha CSV: ', row)
                 instance_dish = Dish(row["dish"], float(row["price"]))
                 if instance_dish not in self.dishes:
                     instance_dish.add_ingredient_dependency(
@@ -32,4 +32,7 @@ if __name__ == "__main__":
     menu_data = MenuData("tests/mocks/menu_base_data.csv")
     print(menu_data)
     print('Pratos do menu:', menu_data.dishes)
-    # print(menu_data.dishes[0])
+    # ingredientes do prato 0
+    print(list(menu_data.dishes)[0].recipe)
+    # ingredientes do prato 1
+    print(list(menu_data.dishes)[1].recipe)

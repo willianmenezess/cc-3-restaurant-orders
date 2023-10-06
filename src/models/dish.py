@@ -49,3 +49,4 @@ if __name__ == "__main__":
     prato_1.add_ingredient_dependency(carne, 1)
     print(prato_1.get_restrictions())
     print(prato_1.recipe)
+    print(prato_1.get_ingredients())
